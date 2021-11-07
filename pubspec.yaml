@@ -3,6 +3,8 @@ description:
   A package which enables you to write more readable, succinct Dart code by
   building on existing language features.
 version: 0.1.0
+repository: https://github.com/blaugold/solvent
+homepage: https://github.com/blaugold/solvent
 
 environment:
   sdk: '>=2.12.0 <3.0.0'
