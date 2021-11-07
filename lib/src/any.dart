@@ -17,6 +17,22 @@ extension AnyExtension<T> on T {
   /// ```
   R let<R>(R Function(T it) f) => f(this);
 
+  /// Returns this value if the predicate [f] returns `true`, otherwise returns
+  /// `null`.
+  ///
+  /// ## Example
+  ///
+  /// With this method, this snippet:
+  /// ```dart
+  /// final message = 'Hello World';
+  /// return isValid(message) ? message : null;
+  /// ```
+  /// can be rewritten like this:
+  /// ```dart
+  /// return 'Hello World'.filter(isValid);
+  /// ```
+  T? filter(bool Function(T it) f) => f(this) ? this : null;
+
   /// Returns this value after calling [f] with it.
   ///
   /// ## Example
