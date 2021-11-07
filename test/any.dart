@@ -2,13 +2,7 @@ import 'package:solvent/solvent.dart';
 import 'package:test/test.dart';
 
 void main() {
-  group('identity()', () {
-    test('returns the value it is given', () {
-      expect(identity('A'), 'A');
-    });
-  });
-
-  group('ValueExtension', () {
+  group('AnyExtension', () {
     group('let()', () {
       test('should return the result of giving the target to f', () {
         expect('A'.let((it) => it + 'B'), 'AB');
@@ -16,7 +10,7 @@ void main() {
 
       test('should be callable on a nullable value', () {
         String? target;
-        expect(target?.let(identity), isNull);
+        expect(target?.let((it) => it), isNull);
       });
     });
 
@@ -27,7 +21,7 @@ void main() {
 
       test('should be callable on a nullable value', () {
         String? target;
-        expect(target?.also(identity), isNull);
+        expect(target?.also((it) => it), isNull);
       });
     });
   });

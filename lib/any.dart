@@ -1,8 +1,5 @@
-/// A function which simply returns the [value] it is given.
-T identity<T>(T value) => value;
-
 /// An extension which adds utilities for values of all types.
-extension ValueExtension<T> on T {
+extension AnyExtension<T> on T {
   /// Returns the result of giving this value to [f].
   ///
   /// This method is for single values what the `map` method is for collections.

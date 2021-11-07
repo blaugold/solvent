@@ -1,3 +1,2 @@
-# solvent
-
-A general purpose utilities package to write more readable, succinct Dart code.
+A package which enables you to write more readable, succinct Dart code by
+building on existing language features.
